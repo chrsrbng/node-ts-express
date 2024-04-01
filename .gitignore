@@ -1,0 +1,20 @@
+# directories
+node_modules/
+dist/
+build/
+coverage/
+logs/
+
+# secrets
+.env
+
+# logs
+*-error.log
+*-debug.log
+
+# misc
+.DS_Store
+.eslintcache
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
