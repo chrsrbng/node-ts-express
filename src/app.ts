@@ -8,7 +8,7 @@ function createServer() {
   app.use(cors());
   app.use(helmet());
 
-  app.use('/api/health', (_, res: Response) => res.status(200).send('OK! hlo'));
+  app.use('/api/health', (_, res: Response) => res.status(200).send('OK!'));
 
   return app;
 }
