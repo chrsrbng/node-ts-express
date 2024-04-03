@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: pg_container
+    image: postgres:15.3-alpine
+    environment:
+      POSTGRES_USER: '${DB_USER}'
+      POSTGRES_PASSWORD: '${DB_PASS}'
+      POSTGRES_DB: db_relloe
+    ports:
+      - '${DB_PORT}:5432'
+    volumes:
+      - db:/var/lib/postgresql/data
+  pgadmin:
+    container_name: pgadmin4_container
+    image: dpage/pgadmin4:6
+    environment:
+      PGADMIN_DEFAULT_EMAIL: '${PG_DEFAULT_EMAIL}'
+      PGADMIN_DEFAULT_PASSWORD: '${PG_DEFAULT_PASS}'
+    ports:
+      - '${PG_ADMIN_PORT}:80'
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+volumes:
+  db:
+    driver: local
+  pgadmin:
+    driver: local

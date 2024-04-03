@@ -10,7 +10,10 @@
     "commitlint",
     "asynciterable",
     "topbar",
-    "openapi"
+    "openapi",
+    "pgadmin",
+    "dpage",
+    "relloe"
   ],
   "flagWords": [],
   "ignorePaths": [
